@@ -12,7 +12,7 @@ from sklearn import preprocessing
 
 app = Flask(__name__, static_url_path='/static')
 model = pickle.load(open('model.pkl','rb'))
-#scale = pickle.load(open('encoder.pkl','rb'))
+scale = pickle.load(open('encoder.pkl','rb'))
 
 @app.route('/')# route to display the home page
 def home():
